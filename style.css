@@ -114,13 +114,12 @@
     width: 83%;
     height: 8vh;
     font-size: 14pt;
-    text-indent: 5px;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 input::placeholder{
     color: #377ACF;
-    font-size: 14pt;
-    text-indent: 5px;
 }
  
 .secao-inscreva__form__button{
@@ -148,16 +147,334 @@ input::placeholder{
     align-items: center;
     justify-content: space-around;
     color: white;
+    }
+    .footer__endereco{
+        width: 29%;
+    }
+    .footer__contato{
+        width: 20%;
+    }
+    .footer__sociais{
+        width: 7%;
+        display: flex;
+        justify-content: space-between;
+
 }
-.footer__endereco{
-    width: 29%;
+
+/* ------------------------------------------ */
+/* ---------------- SMARTPHONE ----------------- */
+/* ------------------------------------------ */
+
+
+
+@media screen and (max-width: 600px) {
+
+    /* ---------------- SEÇÃO 1 ----------------- */
+
+    .secao-principal {
+        height: auto;
+        width: 100vw;
+        display: block;
+        padding: 0;
+    }
+
+    .secao-principal__info {
+        height: auto;
+        width: 100vw;
+        padding: 50px 0 0 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: unset;
+    }
+    
+    .secao-principal__info__slogam {
+        font-size: 15pt;
+        color: white;
+        width: 70%;
+
+    }
+
+
+    .secao-principal__thumbnail {
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secao-principal__thumbnail > img{
+        width: 70vw;
+    }
+
+
+    /* ------------------------------------------ */
+    /* ---------------- SEÇÃO 2 ----------------- */
+    .secao-beneficios {
+        height: auto;
+        width: 100vw;
+    }
+
+    .secao-beneficios__header {
+        padding-top: 40px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .secao-beneficios__conteudo {
+        height: calc(100% - 118px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .secao-beneficios__conteudo__musicos,
+    .secao-beneficios__conteudo__contratantes {
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        color: #377ACF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secao-beneficios__conteudo__musicos > img,
+    .secao-beneficios__conteudo__contratantes > img {
+        padding-top: 30px;
+        height: 50px;
+    }
+
+    .secao-beneficios__conteudo__musicos__titulo,
+    .secao-beneficios__conteudo__contratantes__titulo {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+
+    .secao-beneficios__conteudo__musicos__texto, 
+    .secao-beneficios__conteudo__contratantes__texto{
+        width: 80vw;
+        
+    }
+
+    /* ------------------------------------------ */
+    /* ---------------- SEÇÃO 3 ----------------- */
+
+    .secao-inscreva {
+        height: auto;
+        width: 100vw;
+        box-sizing: border-box;        
+        padding: 20px 0px 25px 20px;    
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .secao-inscreva__header {
+        padding: 0;
+        box-sizing: border-box;    
+        color: white;
+        font-size: 22pt;
+    }
+
+    .secao-inscreva__texto {
+        padding: 20px 0 20px 0;    
+        width: 95vw;
+        color: white;
+        font-size: 12pt;
+    }
+
+    .secao-inscreva__form {
+        padding: 0;
+        width: 100vw;
+    }
+
+    .secao-inscreva__form__input{
+        width: 68%;
+        height: 6vh;
+        font-size: 12pt;
+        padding: 3px;
+    }
+
+    input::placeholder{
+        color: #377ACF;
+    }
+    
+    .secao-inscreva__form__button{
+        width: 23%;
+        height: 6vh;
+        font-size: 12pt;
+        margin-right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ------------------------------------------ */
+    /* ---------------- FOOTER ----------------- */
+
+    .footer{
+        height: 50vh;
+        width: 100vw;
+        padding: 20px 30px 25px 20px;
+        box-sizing: border-box;    
+        display: block;
+        color: white;
+    }
+    .footer__endereco{
+        width: 90%;
+        box-sizing: border-box;
+        padding: 15px 0 15px 0;
+    }
+    .footer__contato{
+        width: 90%;
+    }
+    .footer__sociais{
+        width: 5%;
+        box-sizing: border-box;    
+        margin-top: -60%;
+        margin-left: 70%;
+    }
+
+    .footer__sociais > a{
+        padding-right: 10px;
+    }
+
 }
+
+/* ------------------------------------------ */
+/* ---------------- TABLET ----------------- */
+/* ------------------------------------------ */
+
+
+@media screen and (max-width: 1024px) {
+
+    /* ---------------- SEÇÃO 1 ----------------- */
+.secao-principal {
+    height: 60vh;
+  
+}
+
+.secao-principal__info {
+    height:100%;
+    width: 50%;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secao-principal__info__logo {
+    width: 200px;
+}
+
+.secao-principal__info__slogam {
+    font-size: 26pt;
+    color: white;
+    width: 80%;
+}
+
+.secao-principal__thumbnail {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secao-principal__thumbnail > img{
+    width: 80%;
+}
+/* ------------------------------------------ */
+/* ---------------- SEÇÃO 2 ----------------- */
+.secao-beneficios {
+    height: auto;
+    width: 100vw;
+}
+
+.secao-beneficios__header {
+    padding: 50px 0 30px 0;
+    font-size: 40px;
+}
+
+.secao-beneficios__conteudo {
+    height: calc(100% - 118px);
+    display: flex;
+}
+
+.secao-beneficios__conteudo__musicos,
+.secao-beneficios__conteudo__contratantes {
+    width: 70%;
+    padding: 0 3vw 3vh 3vw;
+}
+
+
+/* ------------------------------------------ */
+/* ---------------- SEÇÃO 3 ----------------- */
+
+.secao-inscreva {
+    height: auto;
+    padding: 30px 0 15px 3vw;
+}
+
+.secao-inscreva__header {
+    padding: 0;
+    color: white;
+    font-size: 36pt;
+}
+
+.secao-inscreva__texto {
+    padding: 3vh 0 0 0;
+    color: white;
+    font-size: 18pt;
+    width: 90%;
+}
+
+.secao-inscreva__form {
+    padding:3vh 0 ;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.secao-inscreva__form__input{
+    width: 78%;
+    height: 6vh;
+}
+
+input::placeholder{
+    color: #377ACF;
+}
+ 
+.secao-inscreva__form__button{
+    width: 17%;
+    height: 6vh;
+    margin-right: 30px;
+}
+
+/* ------------------------------------------ */
+/* ---------------- FOOTER ----------------- */
+
+.footer{
+    padding: 30px 20px 0 0;
+}
+
 .footer__contato{
-    width: 20%;
+    width: 30%;
 }
+
 .footer__sociais{
     width: 7%;
-    display: flex;
-    justify-content: space-between;
+
+}
+.footer__sociais > a{
+    padding-right: 10px;
+    box-sizing: border-box;
+
+}
+  
 
 }
