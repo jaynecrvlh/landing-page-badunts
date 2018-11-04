@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <section class="secao-principal">
@@ -66,10 +67,12 @@
             versão de teste. Você também pode mandar feedbacks para que
             possamos melhorar cada vez mais o aplicativo!  
         </div>
+        <form class="sucess-none" id="newContact">
         <div class="secao-inscreva__form">
-            <input  class="secao-inscreva__form__input" type="email" placeholder="Email">
-            <button class="secao-inscreva__form__button">Enviar</button>
+            <input  id="secao-inscreva__form__input" class="secao-inscreva__form__input" type="email" placeholder="Email">
+            <button type="submit" class="secao-inscreva__form__button">Enviar</button>
         </div>
+        </form>
     </section>
     <footer class="footer">
         <div class="footer__logo"> 
@@ -94,5 +97,34 @@
             </a>
         </div>
     </footer>
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  $(document).ready(function() {
+    if ($('#newContact').length > 0 ) {
+        contactScript('forcontact');
+    }
+    });
+  function contactScript(value) {
+  var a = {
+    apiKey: "AIzaSyDgtmJJotcYRza_WFN5bJhUSlaoFxTDuvg",
+    authDomain: "badunts-lead.firebaseapp.com",
+    databaseURL: "https://badunts-lead.firebaseio.com",
+    projectId: "badunts-lead",
+    storageBucket: "badunts-lead.appspot.com",
+    messagingSenderId: "537065076693"};
+  firebase.initializeApp(a);
+  var b = firebase.database().ref("messages");
+        $("#newContact").submit(function(a) { $(this), console.log("Submit to Firebase");
+        var c = $("#secao-inscreva__form__input").val(),
+            f = {email: c};
+            console.log(c);
+        return b.push(f).then(function(a) {
+            $("#secao-inscreva__form__input").val(""); 
+            $(".sucess").css("display", "block"), 
+            $(".sucess-none").css("display", "block") }), !1 })   
+}
+</script>
 </body>
 </html>

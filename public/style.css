@@ -189,9 +189,9 @@ input::placeholder{
     }
     
     .secao-principal__info__slogam {
-        font-size: 15pt;
+        font-size: 16pt;
         color: white;
-        width: 70%;
+        width: 70vw;
 
     }
 
@@ -318,12 +318,13 @@ input::placeholder{
     /* ---------------- FOOTER ----------------- */
 
     .footer{
-        height: 50vh;
+        height: auto;
         width: 100vw;
         padding: 20px 30px 25px 20px;
         box-sizing: border-box;    
         display: block;
         color: white;
+        /* background-color: red; */
     }
     .footer__endereco{
         width: 90%;
@@ -336,12 +337,10 @@ input::placeholder{
     .footer__sociais{
         width: 5%;
         box-sizing: border-box;    
-        margin-top: -60%;
-        margin-left: 70%;
     }
 
     .footer__sociais > a{
-        padding-right: 10px;
+        padding: 5px 5px 10px 0px;
     }
 
 }
@@ -351,7 +350,7 @@ input::placeholder{
 /* ------------------------------------------ */
 
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
 
     /* ---------------- SEÇÃO 1 ----------------- */
 .secao-principal {
